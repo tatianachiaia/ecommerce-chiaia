@@ -1,4 +1,5 @@
 import Product from './Product'
+import Icono from './CartWidget'
 
 
 const NavBar = () => {
@@ -10,10 +11,7 @@ const NavBar = () => {
             <Product producto="Primero"/>
             <Product producto="Segundo"/>
             <Product producto="Tercero"/>
-            <div className="iconoCarrito">
-                <i className="fa-solid fa-cart-shopping pointer"></i>
-                <p className="numeroCarrito">4</p>
-            </div>
+            <Icono/>
         </header> 
     )
 }
