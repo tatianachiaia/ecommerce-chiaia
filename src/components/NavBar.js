@@ -1,4 +1,4 @@
-import Product from './Product'
+import Category from './Category'
 import Icono from './CartWidget'
 
 
@@ -8,9 +8,9 @@ const NavBar = () => {
             <h1 className='pointer'>
                 Tati's Shop
             </h1>
-            <Product producto="Primero"/>
-            <Product producto="Segundo"/>
-            <Product producto="Tercero"/>
+            <Category category="Primero"/>
+            <Category category="Segundo"/>
+            <Category category="Tercero"/>
             <Icono/>
         </header> 
     )

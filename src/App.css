@@ -33,3 +33,30 @@
 .itemListContainer {
   margin: 30px;
 }
+
+.product-container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding: 25px 15px;
+  border-bottom: #d8dee6 2px solid;
+  text-decoration: none;
+}
+
+.product-image {
+  margin: 0 20px 0 10px;
+}
+
+.product-info {
+  width: 80%;
+  height: 140px;
+}
+
+.product-info h3 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.product-info p {
+  color: rgb(172, 34, 34);
+}
