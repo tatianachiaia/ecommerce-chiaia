@@ -1,16 +1,29 @@
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* header */
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px;
+  padding-left: 20px;
   background-color: rgb(44, 144, 144);
+  color:rgb(238, 249, 245)
+}
+
+.navBar{
+  text-decoration: none;
   color:rgb(238, 249, 245)
 }
 
 .pointer {
   cursor: pointer;
+  margin:30px;
 }
 
 .iconoCarrito {
@@ -26,37 +39,87 @@
   padding: 6px;
   border-radius: 10000%;
   position: absolute;
-  right: 17px;
-  top: -5px;
+  right: 20px;
+  top: 8px;
 }
 
-.itemListContainer {
-  margin: 30px;
-}
+/* Productos */
 
 .product-container {
-  width: 100%;
+  width:90%;
+  height:90%;
+  margin: 20px;
   display: flex;
-  overflow: hidden;
-  padding: 25px 15px;
-  border-bottom: #d8dee6 2px solid;
-  text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 50px;
+  column-gap: 50px;
+  margin: 10px;
 }
 
 .product-image {
-  margin: 0 20px 0 10px;
+  width:200px;
+  height:170px;
 }
 
 .product-info {
-  width: 80%;
-  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+  height: 350px;
+  padding: 10px;
 }
 
-.product-info h3 {
-  font-weight: 600;
-  margin: 0;
+.seeDetails{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(200, 30, 30);
+  padding:10px;
 }
 
 .product-info p {
   color: rgb(172, 34, 34);
+}
+
+/* Detail */
+
+.detailContainer {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.detailImage {
+  width: 300px;
+  height: 300px;
+}
+
+.detailText{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.detailDescription {
+  color:grey
+}
+
+.detailPrice{
+  font-size: 25px;
+  color: rgb(201, 26, 26);
+}
+
+.itemCount {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.itemCount button {
+  padding: 10px;
+  background-color:rgb(197, 30, 30);
+  color: white;
+  border: none;
+  cursor: pointer;
 }
