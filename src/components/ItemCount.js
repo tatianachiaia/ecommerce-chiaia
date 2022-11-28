@@ -7,17 +7,17 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
 
     useEffect(() => {
         setCount(initial);
-    },[]);
+    },[initial]);
 
     const increment = () => {
         if (count < stock) {
-            setCount(count + 1);
+            setCount(prev => prev  + 1);
         }
     }
     
     const decrement = () => {
         if (count > initial) {
-            setCount(count - 1);
+            setCount(prev => prev  - 1);
         }
     }
     return (

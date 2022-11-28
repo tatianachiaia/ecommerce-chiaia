@@ -1,8 +1,7 @@
 import ItemList from './ItemList'
-import { customFetch } from '../utils/customFetch'
-import { products } from '../utils/stock'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
+import {firebaseFetch} from "../utils/firestoreUtils" 
 
 
 const ItemListContainer = () => {
@@ -11,13 +10,10 @@ const ItemListContainer = () => {
 
 
   //componentDidMount
-  useEffect(() => {
-    customFetch(1000, products.filter(item => {
-        if (idCategory === undefined) return item;
-        return item.categoryId === idCategory
-    }))
-        .then(result => setDatos(result))
-        .catch(err => console.log(err))
+  useEffect(() => { 
+    firebaseFetch(idCategory)
+    .then(response => setDatos(response))
+    .catch(err => console.log(err))
 }, [idCategory]);
 
   return (

@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-const Item = ({ id, title, price, thumbnail, description}) => {
+const Item = ({ id, title, price, thumbnail}) => {
     return (
     <div>
         <div className="product-info">
