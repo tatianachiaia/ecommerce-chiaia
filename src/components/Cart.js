@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { CartContext } from './CartContext';
 import FormatNumber from "../utils/FormatNumber";
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
@@ -42,12 +42,12 @@ const Cart = () => {
             const newOrderRef = doc(collection(db, "orders"));
             await setDoc(newOrderRef, order);
             return newOrderRef;
-    }
-    createOrderInFirestore()
-      .then(result => alert('Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: ' + result.id + '\n\n'))
-      .catch(err => console.log(err));
+        }
+        createOrderInFirestore()
+        .then(result => alert('Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: ' + result.id + '\n\n'))
+        .catch(err => console.log(err));
 
-    test.removeList();
+        test.removeList();
     }
 
     return (
@@ -66,7 +66,7 @@ const Cart = () => {
                         test.cartList.length > 0 ? 
                         test.cartList.map(item => 
                         <div className='cart-item' key={item.idItem}>
-                            <div>
+                            <div className='cart-image'>
                                 <img className='product-image' src={item.imgItem} alt="Same alt value"/> 
                                 <div>
                                     {item.titleItem}
