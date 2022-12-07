@@ -6,10 +6,10 @@ Les presento mi sitio web como parte del proyecto creado en el curso de React de
 
 El sitio web contiene 5 secciones: 
 
-Pagina principal
-Categoria "Dishes"
-Categoria "Cooking"
-Categoria "Machines"
+Pagina principal,
+Categoria "Dishes",
+Categoria "Cooking",
+Categoria "Machines",
 Carrito de compras
 
 ### Lenguajes
